@@ -1,0 +1,218 @@
+/* header */
+
+.logo {
+    width: 20%;
+    margin: 20px 0;
+}
+
+.logo img {
+    width: 100%;
+}
+
+header h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.succinct p {
+    font-size: 16px;
+    line-height: 2;
+}
+
+
+/* section */
+
+section {
+    border-top: 1px solid #666;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.button.green {
+    color: #FFFFFF !important;
+    background-color: rgb(9, 67, 203);
+    -webkit-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em .3em, inset rgba(0, 0, 0, 0.15) 0 -0.1em .3em, /* inner shadow */
+    rgb(9, 67, 203) 0 .1em 3px, hsl(50, 75%, 70%) 0 .3em 1px, /* color border */
+    rgba(0, 0, 0, 0.2) 0 .5em 5px;
+    /* drop shadow */
+    -moz-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em .3em, inset rgba(0, 0, 0, 0.15) 0 -0.1em .3em, /* inner shadow */
+    rgb(9, 67, 203) 0 .1em 3px, hsl(50, 75%, 70%) 0 .3em 1px, /* color border */
+    rgba(0, 0, 0, 0.2) 0 .5em 5px;
+    /* drop shadow */
+    box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em .3em, inset rgba(0, 0, 0, 0.15) 0 -0.1em .3em, /* inner shadow */
+    rgb(9, 67, 203) 0 .1em 3px, hsl(50, 75%, 70%) 0 .3em 1px, /* color border */
+    rgba(0, 0, 0, 0.2) 0 .5em 5px;
+    /* drop shadow */
+}
+
+.button {
+    /* text */
+    text-decoration: none;
+    font: 15px 'Droid Sans', sans-serif;
+    font-weight: bold;
+    text-shadow: rgba(255, 255, 255, .5) 0 1px 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    /* layout */
+    padding: .5em .6em .4em .6em;
+    margin: .5em;
+    display: inline-block;
+    position: relative;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    /* effects */
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255, 255, 255, 0)), to( rgba(255, 255, 255, 0.7)));
+    background-image: -moz-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255, 255, 255, 0)), to( rgba(255, 255, 255, 0.7)));
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+    /* color */
+    color: hsl(0, 0%, 40%) !important;
+    background-color: hsl(0, 0%, 75%);
+    -webkit-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em .3em, inset rgba(0, 0, 0, 0.15) 0 -0.1em .3em, /* inner shadow */
+    hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
+    rgba(0, 0, 0, 0.2) 0 .5em 5px;
+    /* drop shadow */
+    -moz-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em .3em, inset rgba(0, 0, 0, 0.15) 0 -0.1em .3em, /* inner shadow */
+    hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
+    rgba(0, 0, 0, 0.2) 0 .5em 5px;
+    /* drop shadow */
+    box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em .3em, inset rgba(0, 0, 0, 0.15) 0 -0.1em .3em, /* inner shadow */
+    hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
+    rgba(0, 0, 0, 0.2) 0 .5em 5px;
+    /* drop shadow */
+}
+
+.button.blue {
+    color: hsl(208, 50%, 40%) !important;
+    background-color: hsl(208, 100%, 75%);
+    -webkit-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em .3em, inset rgba(0, 0, 0, 0.15) 0 -0.1em .3em, /* inner shadow */
+    hsl(208, 50%, 55%) 0 .1em 3px, hsl(208, 50%, 40%) 0 .3em 1px, /* color border */
+    rgba(0, 0, 0, 0.2) 0 .5em 5px;
+    /* drop shadow */
+    -moz-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em .3em, inset rgba(0, 0, 0, 0.15) 0 -0.1em .3em, /* inner shadow */
+    hsl(208, 50%, 55%) 0 .1em 3px, hsl(208, 50%, 40%) 0 .3em 1px, /* color border */
+    rgba(0, 0, 0, 0.2) 0 .5em 5px;
+    /* drop shadow */
+    box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em .3em, inset rgba(0, 0, 0, 0.15) 0 -0.1em .3em, /* inner shadow */
+    hsl(208, 50%, 55%) 0 .1em 3px, hsl(208, 50%, 40%) 0 .3em 1px, /* color border */
+    rgba(0, 0, 0, 0.2) 0 .5em 5px;
+    /* drop shadow */
+}
+
+.submit {
+    text-align: center;
+}
+
+
+/* mbti */
+
+.subtitle {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* .subtitle span {
+    font-weight: 400;
+} */
+
+
+/* yanzheng */
+
+.bd {
+    display: none;
+}
+
+.yanzheng {
+    position: fixed;
+    width: 200px;
+    top: 30%;
+    left: 50%;
+    margin-left: -120px;
+}
+
+.yanzheng input {
+    width: 140px;
+}
+
+.yanzheng button {
+    margin-left: 10px;
+}
+
+
+/* IQ */
+
+.tigan {
+    position: relative;
+    height: 180px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.tigan img {
+    width: 251px;
+    position: absolute;
+    left: 50%;
+    margin-left: -130px;
+}
+
+ul li p img {
+    margin-left: 5px;
+    width: 80px;
+    height: 50px;
+}
+
+ul li p {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+
+/* beierbin */
+
+.beierbin div p {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.beierbin ul {
+    margin-bottom: 20px;
+}
+
+.beierbin ul li {
+    margin-bottom: 5px;
+}
+
+
+/* 主题 */
+
+.TAT .theme {
+    position: relative;
+    height: 300px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.TAT .theme img {
+    height: 300px;
+    position: absolute;
+    left: 20%;
+}
+
+
+/* footer */
+
+.foot {
+    border-top: 1px solid #666;
+    padding: 20px 10px;
+    text-align: center;
+    margin-top: 30px;
+}
