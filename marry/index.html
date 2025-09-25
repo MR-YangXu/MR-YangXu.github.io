@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>婚礼必备采购清单 (2025年)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #f9f0ff 0%, #e6f3ff 100%);
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fad0c4, #a1c4fd);
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+        position: relative;
+      }
+
+      h1 {
+        color: #d63384;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        font-weight: 600;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .subtitle {
+        color: #6c757d;
+        font-size: 1.1rem;
+      }
+
+      .progress-container {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 25px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .progress-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+      }
+
+      .progress-bar {
+        height: 12px;
+        background-color: #e9ecef;
+        border-radius: 6px;
+        overflow: hidden;
+      }
+
+      .progress {
+        height: 100%;
+        background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+        border-radius: 6px;
+        transition: width 0.5s ease;
+        width: 0%;
+      }
+
+      .category {
+        margin-bottom: 25px;
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .category:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      h2 {
+        color: #495057;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #f0f0f0;
+        display: flex;
+        align-items: center;
+      }
+
+      h2::before {
+        content: '❤';
+        margin-right: 10px;
+        color: #ff6b6b;
+      }
+
+      .items-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+      }
+
+      .item {
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+      }
+
+      .item input[type='checkbox'] {
+        margin-right: 10px;
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        accent-color: #ff6b6b;
+      }
+
+      .item label {
+        cursor: pointer;
+        transition: all 0.2s;
+        flex-grow: 1;
+      }
+
+      .item input[type='checkbox']:checked + label {
+        text-decoration: line-through;
+        color: #6c757d;
+      }
+
+      .actions {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 30px;
+      }
+
+      button {
+        background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: all 0.3s;
+        box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(255, 107, 107, 0.4);
+      }
+
+      button:active {
+        transform: translateY(0);
+      }
+
+      .reset-btn {
+        background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+        box-shadow: 0 4px 10px rgba(97, 153, 255, 0.3);
+      }
+
+      .reset-btn:hover {
+        box-shadow: 0 6px 15px rgba(97, 153, 255, 0.4);
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 15px;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .items-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .actions {
+          flex-direction: column;
+        }
+      }
+
+      .completed-count {
+        font-size: 0.9rem;
+        color: #6c757d;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>婚礼必备采购清单 (2025年)</h1>
+        <p class="subtitle">记录您的婚礼筹备进度，勾选已完成的项目</p>
+      </header>
+
+      <div class="progress-container">
+        <div class="progress-info">
+          <span>总体进度</span>
+          <span id="progress-text">0%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" id="progress-bar"></div>
+        </div>
+      </div>
+
+      <div id="checklist-container">
+        <!-- 清单内容将由JavaScript动态生成 -->
+      </div>
+
+      <div class="actions">
+        <button id="save-btn">保存进度</button>
+        <button id="reset-btn" class="reset-btn">重置所有选项</button>
+      </div>
+    </div>
+
+    <script>
+      // 清单数据
+      const checklistData = [
+        {
+          category: '四大金刚',
+          items: ['摄像', '摄影', '主持人', '化妆师', '酒店'],
+        },
+        {
+          category: '酒店',
+          items: ['婚礼策划', '婚纱照', '婚车'],
+        },
+        {
+          category: '新娘清单',
+          items: [
+            '秀禾服/旗袍',
+            '主婚纱',
+            '敬酒服',
+            '晨袍',
+            '回门衣服',
+            '婚鞋',
+            '婚包',
+            '收腹裤',
+            '胸贴',
+            '丝袜',
+            '美瞳',
+            '香水',
+            '化妆品',
+          ],
+        },
+        {
+          category: '新郎',
+          items: ['西装', '衬衫', '马甲', '皮鞋', '领带/领结', '手棒花', '礼服', '鞋子', '配饰', '包包'],
+        },
+        {
+          category: '双方父母',
+          items: ['礼服', '鞋子', '配饰', '包包', '西装', '衬衫', '皮鞋', '领带', '胸花', '改口红包'],
+        },
+        {
+          category: '伴郎/伴娘',
+          items: ['礼服', '手腕花', '伴娘喜扇', '伴手礼', '西装', '衬衫', '领结', '胸花'],
+        },
+        {
+          category: '仪式小物',
+          items: ['对戒', '交杯酒', '敬茶杯', '礼花筒', '背景音乐'],
+        },
+        {
+          category: '婚房装饰',
+          items: ['红色四件套', '压床娃娃', '喜字贴纸', '美纹胶', '贵子篮', '喜字抱枕', '拍照背景墙', '门把挂件', '窗帘绑带'],
+        },
+        {
+          category: '客厅装饰',
+          items: ['红色桌布', '电背景墙', '跪垫', '敬茶杯', '沙发巾'],
+        },
+        {
+          category: '宴席/宾客',
+          items: ['香烟', '喜糖', '酒水饮料', '果盘', '纸杯', '纸巾', '礼薄本', '签到本', '席位卡', '小红包'],
+        },
+        {
+          category: '婚礼用品',
+          items: ['游戏道具', '拍照道具', '誓言卡', '电子请帖', '迎宾牌'],
+        },
+        {
+          category: '新娘急救包',
+          items: [
+            '梳子',
+            '小镜子',
+            '备用丝袜',
+            '鞋垫',
+            '防滑后跟贴',
+            '针线盒',
+            '安全别针',
+            '小剪子',
+            '小发夹',
+            '创可贴',
+            '湿巾',
+            '去渍笔',
+            '充电宝',
+          ],
+        },
+        {
+          category: '接亲用品',
+          items: ['接亲游戏', '礼炮', '堵门道具', '保证书'],
+        },
+      ];
+
+      // 初始化函数
+      function initChecklist() {
+        const container = document.getElementById('checklist-container');
+        container.innerHTML = '';
+
+        // 从localStorage加载已保存的状态
+        const savedState = JSON.parse(localStorage.getItem('weddingChecklist')) || {};
+
+        // 计算总项目数和已完成项目数
+        let totalItems = 0;
+        let completedItems = 0;
+
+        // 生成清单HTML
+        checklistData.forEach((categoryData) => {
+          const categoryDiv = document.createElement('div');
+          categoryDiv.className = 'category';
+
+          // 计算该类别的完成情况
+          const categoryItems = categoryData.items;
+          const categoryCompleted = categoryItems.filter((item) => savedState[item]).length;
+
+          const categoryTitle = document.createElement('h2');
+          categoryTitle.innerHTML = `${categoryData.category} <span class="completed-count">(${categoryCompleted}/${categoryItems.length})</span>`;
+
+          const itemsGrid = document.createElement('div');
+          itemsGrid.className = 'items-grid';
+
+          categoryData.items.forEach((item) => {
+            totalItems++;
+            if (savedState[item]) completedItems++;
+
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'item';
+
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.id = `item-${item}`;
+            checkbox.checked = savedState[item] || false;
+
+            const label = document.createElement('label');
+            label.setAttribute('for', `item-${item}`);
+            label.textContent = item;
+
+            // 添加事件监听器
+            checkbox.addEventListener('change', function () {
+              updateProgress();
+              saveState();
+            });
+
+            itemDiv.appendChild(checkbox);
+            itemDiv.appendChild(label);
+            itemsGrid.appendChild(itemDiv);
+          });
+
+          categoryDiv.appendChild(categoryTitle);
+          categoryDiv.appendChild(itemsGrid);
+          container.appendChild(categoryDiv);
+        });
+
+        // 更新进度
+        updateProgress(completedItems, totalItems);
+      }
+
+      // 更新进度条
+      function updateProgress() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const total = checkboxes.length;
+        const completed = Array.from(checkboxes).filter((cb) => cb.checked).length;
+        const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+        document.getElementById('progress-bar').style.width = `${percentage}%`;
+        document.getElementById('progress-text').textContent = `${percentage}% (${completed}/${total})`;
+
+        // 更新每个类别的完成计数
+        checklistData.forEach((categoryData) => {
+          const categoryItems = categoryData.items;
+          const categoryCompleted = categoryItems.filter((item) => {
+            const checkbox = document.getElementById(`item-${item}`);
+            return checkbox ? checkbox.checked : false;
+          }).length;
+
+          const categoryTitle = Array.from(document.querySelectorAll('h2')).find((h2) => h2.textContent.includes(categoryData.category));
+
+          if (categoryTitle) {
+            const countSpan = categoryTitle.querySelector('.completed-count');
+            if (countSpan) {
+              countSpan.textContent = `(${categoryCompleted}/${categoryItems.length})`;
+            }
+          }
+        });
+      }
+
+      // 保存状态到localStorage
+      function saveState() {
+        const state = {};
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+        checkboxes.forEach((checkbox) => {
+          const label = checkbox.nextElementSibling;
+          if (label) {
+            state[label.textContent] = checkbox.checked;
+          }
+        });
+
+        localStorage.setItem('weddingChecklist', JSON.stringify(state));
+      }
+
+      // 重置所有选项
+      function resetChecklist() {
+        if (confirm('确定要重置所有选项吗？此操作不可撤销。')) {
+          localStorage.removeItem('weddingChecklist');
+          initChecklist();
+        }
+      }
+
+      // 页面加载时初始化
+      document.addEventListener('DOMContentLoaded', function () {
+        initChecklist();
+
+        // 添加按钮事件监听器
+        document.getElementById('save-btn').addEventListener('click', saveState);
+        document.getElementById('reset-btn').addEventListener('click', resetChecklist);
+
+        // 显示保存提示
+        document.getElementById('save-btn').addEventListener('click', function () {
+          alert('进度已保存！');
+        });
+      });
+    </script>
+  </body>
+</html>
